@@ -40,3 +40,6 @@ contains(DEFINES, QHTTP_HAS_CLIENT) {
         qhttpclientresponse.hpp \
         qhttpclientrequest.hpp
 }
+
+CONFIG += dll debug_and_release
+CONFIG(debug, debug|release) { win32: TARGET = $$join(TARGET,,,d) }
